@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-r2-remote-mcp-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "r2_buckets": [
+    {
+      "binding": "R2_BUCKET",
+      "bucket_name": "example-bucket",
+      "preview_bucket_name": "example-bucket-preview"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "vars": {
+    "AUTH_MODE": "github",
+    "ALLOWED_GITHUB_LOGINS": "your-github-login",
+    "R2_BUCKET_NAME": "example-bucket",
+    "R2_ROOT_PREFIX": "",
+    "MAX_INLINE_TEXT_BYTES": "262144",
+    "MAX_TRANSFER_BYTES": "1048576",
+    "MAX_LIST_LIMIT": "100",
+    "ENABLE_ACCOUNT_TOOLS": "false",
+    "ENABLE_PRESIGN_TOOLS": "false"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "dev": {
+    "port": 8787
+  }
+}
