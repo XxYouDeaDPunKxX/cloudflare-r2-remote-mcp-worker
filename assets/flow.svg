@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 360" role="img" aria-labelledby="title desc">
+  <title id="title">Remote MCP access flow</title>
+  <desc id="desc">AI client connects to a remote MCP endpoint, passes a GitHub OAuth access check, reaches a Cloudflare Worker, and operates on your R2 bucket.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f48120" />
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.22" />
+    </filter>
+  </defs>
+  <rect width="1040" height="360" rx="28" fill="#151b23" />
+  <g fill="none" stroke="#303947" stroke-width="1">
+    <path d="M0 90H1040" />
+    <path d="M0 180H1040" />
+    <path d="M0 270H1040" />
+    <path d="M130 0V360" />
+    <path d="M260 0V360" />
+    <path d="M390 0V360" />
+    <path d="M520 0V360" />
+    <path d="M650 0V360" />
+    <path d="M780 0V360" />
+    <path d="M910 0V360" />
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="46" y="116" width="160" height="128" rx="20" fill="#0d1117" stroke="#303947" />
+    <rect x="260" y="116" width="170" height="128" rx="20" fill="#0d1117" stroke="#303947" />
+    <rect x="486" y="116" width="170" height="128" rx="20" fill="#0d1117" stroke="#f48120" />
+    <rect x="712" y="116" width="160" height="128" rx="20" fill="#0d1117" stroke="#303947" />
+    <rect x="926" y="116" width="68" height="128" rx="20" fill="#0d1117" stroke="#303947" />
+  </g>
+  <g stroke="#f48120" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M206 180H248" />
+    <path d="M430 180H474" />
+    <path d="M656 180H700" />
+    <path d="M872 180H912" />
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" text-anchor="middle">
+    <text x="126" y="166" fill="#f0f6fc" font-size="18" font-weight="700">AI client</text>
+    <text x="126" y="194" fill="#9fb0c3" font-size="13">ChatGPT or MCP</text>
+
+    <text x="345" y="158" fill="#f0f6fc" font-size="18" font-weight="700">Remote MCP</text>
+    <text x="345" y="184" fill="#f0f6fc" font-size="18" font-weight="700">endpoint</text>
+    <text x="345" y="212" fill="#9fb0c3" font-size="13">/mcp</text>
+
+    <text x="571" y="158" fill="#f0f6fc" font-size="18" font-weight="700">GitHub OAuth</text>
+    <text x="571" y="184" fill="#f0f6fc" font-size="18" font-weight="700">access check</text>
+    <text x="571" y="212" fill="#9fb0c3" font-size="13">allowlist</text>
+
+    <text x="792" y="166" fill="#f0f6fc" font-size="18" font-weight="700">Cloudflare</text>
+    <text x="792" y="194" fill="#f0f6fc" font-size="18" font-weight="700">Worker</text>
+
+    <text x="960" y="166" fill="#f0f6fc" font-size="18" font-weight="700">R2</text>
+    <text x="960" y="194" fill="#9fb0c3" font-size="13">bucket</text>
+  </g>
+</svg>
