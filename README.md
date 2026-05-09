@@ -214,3 +214,9 @@ Do not expose `AUTH_MODE=none` on a public URL unless another access layer prote
 ## 📄 License
 
 MIT. See [LICENSE](LICENSE).
+
+## 🧑‍💻 Authorship Note
+
+Cloudflare R2 Remote MCP Worker is a human-led project by XxYouDeaDPunKxX.
+
+The concept, structure, behavioral logic, and final direction are human-authored. AI assistance was used during development for drafting, rewriting, refinement, iteration speed, and support material.
