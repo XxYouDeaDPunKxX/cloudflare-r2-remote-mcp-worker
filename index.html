@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Remote MCP Access for Your Cloudflare R2 Bucket</title>
+    <meta
+      name="description"
+      content="Use your own Cloudflare R2 bucket from ChatGPT or any compatible remote MCP client through a Worker-hosted MCP endpoint."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Remote MCP Access for Your Cloudflare R2 Bucket" />
+    <meta
+      property="og:description"
+      content="A self-hosted remote MCP server that lets ChatGPT or compatible AI clients read and manage objects in your own Cloudflare R2 bucket."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Cloudflare R2 Remote MCP Worker</p>
+        <h1 id="page-title">Remote MCP Access for Your Cloudflare R2 Bucket</h1>
+        <p class="hero-copy">
+          Use your own Cloudflare R2 bucket from ChatGPT or any compatible remote MCP client through a Worker-hosted MCP endpoint.
+        </p>
+        <p class="definition">
+          A self-hosted remote MCP server that lets ChatGPT or compatible AI clients read and manage objects in your own Cloudflare R2 bucket.
+        </p>
+        <div class="actions" aria-label="Primary links">
+          <a class="button primary" href="https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker">View GitHub</a>
+          <a class="button secondary" href="https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker#setup-order">Read Setup</a>
+        </div>
+      </section>
+
+      <section class="panel flow-panel" aria-labelledby="flow-title">
+        <div>
+          <p class="section-kicker">How it works</p>
+          <h2 id="flow-title">A remote endpoint between your AI client and your bucket.</h2>
+          <p>
+            The client does not need local filesystem access. It calls a public MCP endpoint hosted by your Cloudflare Worker. Access is checked through a GitHub OAuth allowlist before object operations reach your bound R2 bucket.
+          </p>
+        </div>
+        <img src="assets/flow.svg" alt="AI client to remote MCP endpoint to GitHub OAuth access check to Cloudflare Worker to your R2 bucket" />
+      </section>
+
+      <section class="grid" aria-label="Project boundaries">
+        <article class="card">
+          <p class="section-kicker">Ownership</p>
+          <h2>Your bucket. Your Worker. Your credentials.</h2>
+          <p>
+            The project is self-hosted. You deploy the Worker, bind your own R2 bucket, and provide the credentials needed for the optional surfaces you enable.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="section-kicker">What clients can do</p>
+          <h2>Object-level operations.</h2>
+          <p>
+            Clients can list, read, write, upload or download base64 payloads, copy, move, rename, and delete objects in the configured R2 surface.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="section-kicker">Security boundary</p>
+          <h2>Public endpoint, explicit access.</h2>
+          <p>
+            Public deployments use GitHub OAuth allowlisting. Authless mode is only for local development or endpoints protected by another access layer.
+          </p>
+        </article>
+
+        <article class="card">
+          <p class="section-kicker">Deployment pieces</p>
+          <h2>Cloudflare Workers plus R2 binding.</h2>
+          <p>
+            The required deployment surface is a Worker with an R2 binding. Optional presigned URLs use R2 S3 credentials. Optional account visibility remains read-only.
+          </p>
+        </article>
+      </section>
+
+      <section class="boundary" aria-labelledby="boundary-title">
+        <p class="section-kicker">Not exposed</p>
+        <h2 id="boundary-title">This is not full R2 account administration.</h2>
+        <p>
+          Destructive account administration is not exposed. Bucket creation, bucket deletion, CORS mutation, lifecycle mutation, domain mutation, and notification mutation stay outside the MCP tool surface.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
