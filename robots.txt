@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/sitemap.xml
