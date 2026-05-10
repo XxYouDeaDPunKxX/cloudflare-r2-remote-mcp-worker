@@ -1,0 +1,53 @@
+{
+  "name": "Cloudflare R2 Remote MCP Worker",
+  "url": "https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/",
+  "repository": "https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker",
+  "type": "remote MCP server",
+  "runtime": "Cloudflare Worker",
+  "storage": "Cloudflare R2",
+  "auth_model": "GitHub OAuth allowlist for public deployments",
+  "description": "A self-hosted remote MCP server that exposes a narrow object-management surface for an operator-owned Cloudflare R2 bucket.",
+  "identity": "Operator-owned bucket, operator-owned Worker, explicit remote MCP boundary.",
+  "capabilities": [
+    "object listing",
+    "object metadata inspection",
+    "text-like object reading",
+    "text object writing",
+    "base64 object upload",
+    "object copy operations",
+    "object move operations",
+    "guarded object key removal",
+    "optional read-only account visibility",
+    "optional temporary presigned URLs"
+  ],
+  "security_boundary": {
+    "exposed": [
+      "object-level operations for the configured R2 binding"
+    ],
+    "optional": [
+      "read-only account visibility",
+      "temporary presigned URLs"
+    ],
+    "outside_scope": [
+      "bucket creation",
+      "bucket removal",
+      "CORS mutation",
+      "lifecycle mutation",
+      "domain mutation",
+      "notification mutation"
+    ]
+  },
+  "deployment_pieces": [
+    "Cloudflare Worker",
+    "R2 bucket binding",
+    "GitHub OAuth App for public deployments",
+    "KV namespace for OAuth state",
+    "optional R2 S3 credentials for presigned URLs"
+  ],
+  "machine_readable_files": [
+    "llms.txt",
+    "raw-manifest.json",
+    "robots.txt",
+    "sitemap.xml"
+  ]
+}
