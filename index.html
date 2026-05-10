@@ -9,15 +9,46 @@
       content="Use your own Cloudflare R2 bucket from ChatGPT or any compatible remote MCP client through a Worker-hosted MCP endpoint."
     />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/" />
     <meta property="og:title" content="Remote MCP Access for Your Cloudflare R2 Bucket" />
     <meta
       property="og:description"
       content="A self-hosted remote MCP server that lets ChatGPT or compatible AI clients read and manage objects in your own Cloudflare R2 bucket."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/" />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="text/plain" href="llms.txt" title="LLM-readable project index" />
+    <link rel="alternate" type="application/json" href="raw-manifest.json" title="Machine-readable project manifest" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "Cloudflare R2 Remote MCP Worker",
+        "url": "https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/",
+        "codeRepository": "https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker",
+        "programmingLanguage": ["TypeScript", "JavaScript"],
+        "runtimePlatform": "Cloudflare Worker",
+        "applicationCategory": "DeveloperApplication",
+        "description": "A self-hosted remote MCP server that exposes a narrow object-management surface for an operator-owned Cloudflare R2 bucket.",
+        "keywords": "Cloudflare R2, Cloudflare Worker, MCP, remote MCP, ChatGPT, object storage, GitHub OAuth",
+        "isAccessibleForFree": true,
+        "mainEntityOfPage": "https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/",
+        "author": {
+          "@type": "Person",
+          "name": "XxYouDeaDPunKxX",
+          "url": "https://github.com/XxYouDeaDPunKxX"
+        },
+        "about": [
+          "Cloudflare R2 object access",
+          "remote MCP endpoint",
+          "Cloudflare Worker deployment",
+          "GitHub OAuth allowlisting"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -141,6 +172,13 @@
           <li>Optional R2 S3 credentials for presigned URLs</li>
         </ul>
       </section>
+
+      <footer class="machine-footer" aria-label="Machine-readable project files">
+        <span>Machine-readable:</span>
+        <a href="llms.txt">llms.txt</a>
+        <a href="raw-manifest.json">manifest</a>
+        <a href="sitemap.xml">sitemap</a>
+      </footer>
     </main>
   </body>
 </html>
