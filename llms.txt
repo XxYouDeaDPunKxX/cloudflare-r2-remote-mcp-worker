@@ -1,0 +1,57 @@
+# Cloudflare R2 Remote MCP Worker
+
+URL: https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/
+Repository: https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker
+
+## What this is
+
+Cloudflare R2 Remote MCP Worker is a self-hosted remote MCP server for a Cloudflare R2 bucket.
+
+It provides a narrow object-management surface through a Cloudflare Worker for ChatGPT or compatible remote MCP clients.
+
+## Operating line
+
+Operator-owned bucket. Operator-owned Worker. Explicit remote MCP boundary.
+
+## Runtime model
+
+- Cloudflare Worker hosts the remote MCP endpoint.
+- Cloudflare R2 stores the bucket objects.
+- GitHub OAuth allowlisting is used for public deployments.
+- KV can support OAuth state.
+- Presigned URL support is optional and deployment-dependent.
+
+## Main capabilities
+
+- Object listing
+- Object metadata inspection
+- Text-like object reading
+- Text object writing
+- Base64 object upload
+- Object copy and move operations
+- Object key removal through guarded tools
+- Optional read-only account visibility
+- Optional temporary presigned URLs
+
+## Security boundary
+
+Exposed surface:
+Object-level operations for the configured R2 binding.
+
+Optional surface:
+Read-only account visibility and temporary presigned URLs.
+
+Outside the exposed surface:
+Bucket creation, bucket removal, CORS mutation, lifecycle mutation, domain mutation, and notification mutation.
+
+## Deployment pieces
+
+- Cloudflare Worker
+- R2 bucket binding
+- GitHub OAuth App for public deployments
+- KV namespace for OAuth state
+- Optional R2 S3 credentials for presigned URLs
+
+## Intended use
+
+Use this project when a remote MCP client needs bounded access to objects in an operator-owned R2 bucket without exposing broad Cloudflare account administration.
