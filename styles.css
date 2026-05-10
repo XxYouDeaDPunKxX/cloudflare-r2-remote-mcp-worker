@@ -356,6 +356,27 @@ h3 {
   padding-left: 1.1rem;
 }
 
+.machine-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.7rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-size: 0.78rem;
+}
+
+.machine-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.machine-footer a:hover,
+.machine-footer a:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+}
+
 @media (max-width: 860px) {
   .site-header {
     align-items: flex-start;
