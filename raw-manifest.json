@@ -1,13 +1,19 @@
 {
   "name": "Cloudflare R2 Remote MCP Worker",
-  "url": "https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/",
-  "repository": "https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker",
   "type": "remote MCP server",
+  "description": "A self-hosted remote MCP server that exposes a narrow object-management surface for an operator-owned Cloudflare R2 bucket.",
+  "url": "https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/",
+  "page_url": "https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/",
+  "repository": "https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker",
   "runtime": "Cloudflare Worker",
   "storage": "Cloudflare R2",
   "auth_model": "GitHub OAuth allowlist for public deployments",
-  "description": "A self-hosted remote MCP server that exposes a narrow object-management surface for an operator-owned Cloudflare R2 bucket.",
+  "license": "MIT",
+  "license_url": "https://opensource.org/license/mit/",
+  "canonical_source": "main branch repository files",
   "identity": "Operator-owned bucket, operator-owned Worker, explicit remote MCP boundary.",
+  "purpose": "Provide bounded remote MCP access to object-level operations on an operator-owned Cloudflare R2 bucket.",
+  "use_case": "Use this project when a remote MCP client needs bounded access to objects in an operator-owned R2 bucket without exposing broad Cloudflare account administration.",
   "capabilities": [
     "object listing",
     "object metadata inspection",
@@ -44,10 +50,38 @@
     "KV namespace for OAuth state",
     "optional R2 S3 credentials for presigned URLs"
   ],
+  "discovery_set": {
+    "llms": "llms.txt",
+    "manifest": "raw-manifest.json",
+    "robots": "robots.txt",
+    "sitemap": "sitemap.xml",
+    "html_signals": [
+      "canonical URL",
+      "rel=alternate for llms.txt",
+      "rel=alternate for raw-manifest.json",
+      "JSON-LD SoftwareSourceCode metadata",
+      "Open Graph metadata",
+      "footer machine-readable links"
+    ]
+  },
   "machine_readable_files": [
     "llms.txt",
     "raw-manifest.json",
     "robots.txt",
     "sitemap.xml"
+  ],
+  "keywords": [
+    "Cloudflare R2",
+    "Cloudflare Worker",
+    "MCP",
+    "remote MCP",
+    "ChatGPT",
+    "object storage",
+    "GitHub OAuth",
+    "operator-owned bucket",
+    "R2 object access",
+    "Worker-hosted MCP endpoint",
+    "bounded object management",
+    "self-hosted MCP server"
   ]
 }
