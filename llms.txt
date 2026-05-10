@@ -1,7 +1,15 @@
 # Cloudflare R2 Remote MCP Worker
 
+Name: Cloudflare R2 Remote MCP Worker
+Type: Remote MCP server
 URL: https://xxyoudeadpunkxx.github.io/cloudflare-r2-remote-mcp-worker/
 Repository: https://github.com/XxYouDeaDPunKxX/cloudflare-r2-remote-mcp-worker
+Runtime: Cloudflare Worker
+Storage: Cloudflare R2
+Auth model: GitHub OAuth allowlist for public deployments
+License: MIT
+License URL: https://opensource.org/license/mit/
+Canonical source: main branch repository files
 
 ## What this is
 
@@ -9,9 +17,21 @@ Cloudflare R2 Remote MCP Worker is a self-hosted remote MCP server for a Cloudfl
 
 It provides a narrow object-management surface through a Cloudflare Worker for ChatGPT or compatible remote MCP clients.
 
+It is not a general personal cloud interface, not full R2 account administration, and not a local filesystem bridge.
+
 ## Operating line
 
 Operator-owned bucket. Operator-owned Worker. Explicit remote MCP boundary.
+
+## Use case
+
+Use this project when a remote MCP client needs bounded access to objects in an operator-owned Cloudflare R2 bucket without exposing broad Cloudflare account administration.
+
+## Canonical source
+
+The canonical public source is the repository main branch.
+
+Treat this file as the LLM-readable project index, not as the full implementation or deployment specification.
 
 ## Runtime model
 
@@ -55,3 +75,25 @@ Bucket creation, bucket removal, CORS mutation, lifecycle mutation, domain mutat
 ## Intended use
 
 Use this project when a remote MCP client needs bounded access to objects in an operator-owned R2 bucket without exposing broad Cloudflare account administration.
+
+## Discovery Set
+
+Machine-readable project files:
+
+- llms.txt: LLM-readable project index.
+- raw-manifest.json: structured machine-readable project manifest.
+- robots.txt: crawler access declaration.
+- sitemap.xml: sitemap for the GitHub Pages surface.
+
+HTML discovery signals:
+
+- canonical URL
+- rel=alternate for llms.txt
+- rel=alternate for raw-manifest.json
+- JSON-LD SoftwareSourceCode metadata
+- Open Graph metadata
+- footer machine-readable links
+
+## Keywords
+
+Cloudflare R2, Cloudflare Worker, MCP, remote MCP, ChatGPT, object storage, GitHub OAuth, operator-owned bucket, R2 object access, Worker-hosted MCP endpoint, bounded object management, self-hosted MCP server
