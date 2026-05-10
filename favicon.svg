@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cloudflare R2 Remote MCP Worker favicon">
+  <rect width="64" height="64" rx="14" fill="#0b0f14"/>
+  <path d="M18 25.5c1.8-6.2 7.4-10.5 14-10.5 5.7 0 10.8 3.3 13.2 8.3 5.1.8 8.8 5.1 8.8 10.3 0 5.8-4.7 10.4-10.5 10.4H18.8C13.9 44 10 40.1 10 35.2c0-4.6 3.5-8.4 8-8.8Z" fill="#f48120" opacity=".96"/>
+  <path d="M20 34h24v12.5c0 2.5-2 4.5-4.5 4.5h-15c-2.5 0-4.5-2-4.5-4.5V34Z" fill="#10161d" stroke="#eef4fb" stroke-width="3"/>
+  <path d="M25 34v-3.5c0-3.9 3.1-7 7-7s7 3.1 7 7V34" fill="none" stroke="#eef4fb" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 42h8" stroke="#f48120" stroke-width="3" stroke-linecap="round"/>
+</svg>
